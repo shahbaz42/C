@@ -10,17 +10,29 @@ struct node{
 struct node* newNode(int);
 
 int main (){
-    // creating and initialising a Binary Tree
-    struct node* root = newNode(4);
-    struct node* p1 = newNode(1);
-    struct node* p2 = newNode(6);
-    struct node* p3 = newNode(5);
-    struct node* p4 = newNode(2);
-    
-    root->left = p1;
-    root->right = p2;
-    p1->left = p3;
-    p1->right = p4;
+    // creating parent node and assigning the data using function
+    struct node* p = newNode(1);
+
+    // // creating left child node without function
+    // struct node *p1;
+    // p1 = (struct node *) malloc(sizeof(struct node));
+    // p1->left = NULL;
+    // p1->right = NULL;
+
+    // // creating right child node without function
+    // struct node *p2;
+    // p2 = (struct node *) malloc(sizeof(struct node));
+    // p2->left = NULL;
+    // p2->right = NULL;
+
+    // creating two child nodes using function
+    struct node *p1 = newNode(2);
+    struct node *p2 = newNode(3);
+
+    // assigning the left child to the parent node
+    p->left = p1;
+    // assigning the right child to the parent node
+    p->right = p2;
 
     return 0;
 }
