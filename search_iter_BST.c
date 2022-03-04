@@ -9,7 +9,7 @@ struct node
 };
 
 struct node *newNode(int); // function for adding new nodes
-struct node *searchIter_BST(struct node *, int);  // function for searching in an iterative way
+struct node *searchIter_BST(struct node *, int);  // function for searching in an iterative way 
 
 int main()
 {
