@@ -48,21 +48,21 @@ void inorder(struct node* root){
     }
 }
 
-struct node* insert_BST_recursive(struct node* root, int key){
-    if (root == NULL)
-        return newNode(key);
+struct node* insert_BST_recursive(struct node* root, int key){  // recursive function to insert node in a BST
+    if (root == NULL)                                           // if the root is NULL
+        return newNode(key);                                    // return a new node
 
-    else if(key == root->data){
-        printf("Already present in BST");
+    else if(key == root->data){                                 // if the key is equal to the root's data do not insert
+        printf("Already present in BST");                      
         return root;
     }
 
-    else if (key < root->data){
-        root->left = insert_BST_recursive(root->left, key);
+    else if (key < root->data){                                // if the key is less than the root's data
+        root->left = insert_BST_recursive(root->left, key);    // call the function for the left child
     }
 
     else{
-        root->right = insert_BST_recursive(root->right, key);
+        root->right = insert_BST_recursive(root->right, key);  // if the key is greater than the root's data call the function for the right child
     }
 
 }
