@@ -11,23 +11,24 @@ struct node* newNode(int); // function for adding new nodes
 void inorder(struct node*);  //function for for preorder traversal
 
 int main (){
-    // creating and initialising a Binary Tree
-    struct node* root = newNode(4);
-    struct node* p1 = newNode(1);
-    struct node* p2 = newNode(6);
-    struct node* p3 = newNode(5);
-    struct node* p4 = newNode(2);
     
+    // creating and initialising a Binary Tree
+    struct node *root = newNode(5);
+    struct node *p1 = newNode(3);
+    struct node *p2 = newNode(6);
+    struct node *p3 = newNode(1);
+    struct node *p4 = newNode(4);
+
     root->left = p1;
     root->right = p2;
     p1->left = p3;
     p1->right = p4;
 
-    //         4
+    //         5
     //        / \
-    //       1   6
+    //       3   6
     //      / \  
-    //     5  2 
+    //     1   4
 
     // calling the function for preorder traversal
     inorder(root);
