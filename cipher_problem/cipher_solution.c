@@ -64,9 +64,6 @@ int get_intermediate_array(int *intermediate_array, char *intermediate, int bin_
         i += bin_bitsize;
         j++;
     }
-    // Note: the last element of the array is not used, because it might 
-    // contain incorrect value when the length og intermediete text is
-    // not divisible by the bitsize of the binary number
     return j;
 }
 
